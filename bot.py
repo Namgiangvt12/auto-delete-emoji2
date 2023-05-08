@@ -12,7 +12,7 @@ async def send_message(message, user_message, is_private):
 
 
 def run_discord_bot():
-    TOKEN = 'MTEwNTA5OTgyMDQ4NzY5MjM0OQ.GE0Lej.UYPNbIBuSHHVs5fZrKs8u4AsLZqNTeuhpCGElE'
+    TOKEN = 'MTEwNTA5OTgyMDQ4NzY5MjM0OQ.Ge92xc.XQ7126fbIZ4zh0XBMP9FXAwpE_dYiBKGUb3VSQ'
     intents = discord.Intents.default()
     intents.message_content = True
     client = discord.Client(intents=intents)
@@ -25,5 +25,5 @@ def run_discord_bot():
     async def on_message(message):
         if message.author != client.user and message.content == '🫡':
             await message.delete()
-            await message.channel.send({message.author})
+            await message.channel.send("Delete")
     client.run(TOKEN)
